@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/x-icon" href="{% static 'img/blade_runner_1.ico'%}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <title>
+            Comentários
+        </title>
+        <a href="/"class="voltar-link">Voltar</a>
+    </head>
+    <body>
+        <center>
+            <h1 class="secao-comentario">
+                Seção de Comentários
+            </h1>
+        <form class="form-comentario" method="post" action="{% url 'enviar_comentario' %}"onsubmit="delaySubmit()" id="comnment-form">
+           {% csrf_token %}
+            <label for="nome">Nome:</label>
+                <input type="text" name="nome" required>
+                <br>
+                <label for="comentario">Comentário:</label>
+                <textarea name="comentario" required></textarea>
+                <br>
+                <input type="submit" value="Enviar">
+        </form>
+        <div class="comentario_">
+        {% for usuario in usuarios %}
+            <h3 class="nome-amarelo">
+                Nome: {{ usuario.nome }}
+            </h3>
+            <p class="nome-laranja">
+                Comentário: {{ usuario.comentario}}
+            </p>
+            <p class="horario">
+                {{ usuario.data_postagem }}
+            </p>
+        {% endfor %}
+        </div>
+        </center>
+    </body>
+    </html>

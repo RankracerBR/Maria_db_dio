@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+         |BEM-VIND@|
+        </title>
+        <link rel="icon" type="image/x-icon" href="{% static 'img/blade_runner_1.ico'%}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <div class = "centralizado">
+            <h2 class = "fonte-personalizada">
+                <ul><li>
+                        OLÁ, {{ mensagem }}
+                </ul></li>
+            </h2>
+        </div>
+        <p id="horario">Horario Atual:</p>
+        <p id="horario-atual">{{ hora_atual|date:'H:i:s' }} </p>
+        <script src="{% static 'js/atualizar_automatico.js' %}"></script>
+    </head>
+    <body>
+        <a href="Comentario/" class="comentario-link">Mande seu comentario</a>
+        <div class="repositories">
+        <a href="Repositorios/">Repositórios GitHub</a>
+        </div>
+        <center>
+        <div class="brilho"></div>
+        <div class="container">
+            <img class ="imagem-personalizada" src = "{% static 'img/foto.jpeg' %}" alt="Imagem" style="margin-top: -480px;">   
+        </div>
+        </center>
+        <center>
+            <div id="linkedin">  
+            <ul>
+                <li>
+                    <a href ="https://www.linkedin.com/in/augusto-pontes-123886234/" target= "_blank">
+                        <img src = "https://cdn-icons-png.flaticon.com/512/174/174857.png" height="100" width="100">
+                    </a>
+                </l1>
+            </ul>
+            </div>
+            <div id="github">
+            <ul>
+                <li>
+                    <a href ="https://github.com/RankracerBR" target="_blank">
+                        <img src = "{% static 'img/GitHub.webp'%}" height="100" width="100">
+                    </a>
+                </li>     
+            </ul>
+            </div>
+            <div id="instagram">
+            <ul>
+                <li>
+                    <a href ="https://www.instagram.com/rankracerbr/" target = "_blank">
+                        <img src = "{% static 'img/Instagram.webp' %}" height="100" width="100">
+                    </a>
+                </li> 
+            </ul>  
+            </div>
+        </center>
+        <div class="image-container">
+            <img id="image-display" src="" alt="Image">
+        </div>
+        <div class="buttons">
+            <button id="arrow-left">←</button>
+            <button id="arrow-right">→</button>
+        </div>
+        <h3 class="name">PROJETOS</h3>
+        <div id="image-container"> 
+        <script class="image-container">
+            const images = [
+                "{% static 'img/im1.png' %}",
+                "{% static 'img/im2.png' %}",
+                "{% static 'img/im3.png' %}",
+                "{% static 'img/im4.png' %}",
+                "{% static 'img/im5.png' %}",
+                "{% static 'img/im6.png' %}",
+                "{% static 'img/im7.png' %}",
+                "{% static 'img/im8.png' %}",
+                "{% static 'img/im9.png' %}",
+                "{% static 'img/im10.png' %}",
+                "{% static 'img/im11.png' %}",
+                "{% static 'img/im12.png' %}",
+                "{% static 'img/im13.png' %}",
+                "{% static 'img/im14.png' %}",
+                "{% static 'img/im15.png' %}",
+                "{% static 'img/im16.png' %}",
+                "{% static 'img/im17.png' %}",
+                "{% static 'img/im18.png' %}",
+                "{% static 'img/im19.png' %}",
+                "{% static 'img/im20.png' %}",
+                "{% static 'img/im21.png' %}"
+            ];
+        </script>
+        </div>
+        <script src="{% static 'js/projects_git.js'%}"></script>
+        <section class="logos-section">
+            <div class="logos-container">
+                <ul><li><img src="{% static 'img/django_image.png'%}" alt="Logo 1"></ul></li>
+                <ul><li><img src="{% static 'img/javascript_image.png'%}" alt="Logo 2"></ul></li>
+                <ul><li><img src="{% static 'img/html_image.png'%}" alt="Logo 3"></ul></li>
+                <ul><li><img src="{% static 'img/css_image.png'%}" alt="Logo 4"></ul></li>
+                <ul><li><img src="{% static 'img/aws_image.png'%}" alt="Logo 5"></ul></li>
+                <ul><li><img src="{% static 'img/docker_image.webp'%}" alt="Logo 6"></ul></li>
+            </div>
+    </body>
+    </html>
