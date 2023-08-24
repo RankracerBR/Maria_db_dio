@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/x-icon" href='/static/img/blade_runner_1.ico'>
+        <title>
+            Comentários
+        </title>
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+        <a href="/"class="voltar-link">Voltar</a>
+    </head>
+    <body>
+        <center>
+            <h1 class="comments">Comentários</h1>
+            <form method="POST">
+                <label for="comment">Deixe um comentário:</label><br>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name"><br>
+                <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
+                <input type="submit" value="Enviar">
+            </form>
+            <h2>Comentários anteriores:</h2>
+            <ul>
+                {% for comment in comments %}
+                    <li>{{ comment.name}}</li>
+                    <li>{{ comment.text }}</li>
+                {% endfor %}
+            </ul>
+        </center>
+    </body>
+    </html>
