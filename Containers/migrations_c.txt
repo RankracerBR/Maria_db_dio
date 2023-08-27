@@ -1,2 +1,0 @@
-CONTAINER ID   IMAGE     COMMAND       CREATED       STATUS         PORTS     NAMES
-2bc5c49911a2   ubuntu    "/bin/bash"   12 days ago   Up 4 minutes             migrations-c
