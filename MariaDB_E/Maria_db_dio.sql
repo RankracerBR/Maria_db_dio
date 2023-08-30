@@ -18,3 +18,11 @@ CREATE TABLE viagens.reservas(
         id_destino INT COMMENT 'Referência ao ID do destino da reserva',
         data DATE COMMENT 'Data da reserva',
         status VARCHAR(255) DEFAULT 'Pendente' COMMENT 'Status da reserva(confirmada, pendente, cancelada, etc.)')
+
+INSERT INTO usuarios (id, nome, email, data_nascimento, endereco) VALUES (1, "Augusto", "teste@teste.com", "2003-08-25", "Rua josefa taveiro")
+
+INSERT INTO destinoS(id, nome, descricao) VALUES (1,'Cabo Branco','Linda Praia :3')
+
+INSERT INTO reservas (id, id_usuario, id_destino, status, data) VALUES (1, 1,1, 'pendente', '2023-11-11')
+
+INSERT INTO viagens.reservas(id, id_usuario)
