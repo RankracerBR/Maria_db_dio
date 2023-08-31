@@ -7,3 +7,12 @@ SELECT * FROM destinos
 
 SELECT * FROM usuarios
 WHERE id = 1 OR nome LIKE "%Maria%"
+
+SELECT * FROM destinos
+
+DELETE FROM destinos
+WHERE nome = "Praia do Rosa"
+
+SELECT * FROM usuarios_nova
+
+SELECT * FROM reservas
